@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projet — Redynamisation Centre Culturel "Le Zoo"</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XCe45KS97gCTHCBIFgSTIzZjV5MLVeQOI9ef9_a3Vdc6cVR25O91uBBOva4FoYij0JJ9JVdRNHmVyN613nFvxQ1GxmGF8AnsBj0JNasm1ZSy37gGnXCFj2PA1DeetSYAKZQCAEB4iAVkNiJ_tHwgcv28fX3ZagZk1hhf-6Yc2QUE0cCq01yPoj7TBLuTCwxPjfdHtp3GwvCenCmXF25sHmFcwdqMeJcJgTUlnqCV-P0" charset="UTF-8"></script><style>
+    :root{
+      --accent:#0F766E;
+      --accent-2:#0EA5A3;
+      --muted:#6B7280;
+      --bg:#0f172a;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#071023 0%, #081428 45%, #0b1220 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:40px 18px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header.hero{
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:center;
+      margin-bottom:34px;
+    }
+
+    .brand{
+      background:linear-gradient(135deg, rgba(14,165,163,0.12), rgba(15,118,110,0.06));
+      padding:28px;
+      border-radius:18px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    .title{
+      font-family:"Playfair Display", serif;
+      font-weight:700;
+      font-size:34px;
+      margin:0 0 6px;
+      letter-spacing:0.4px;
+      color: #fff;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-visual{
+      height:230px;
+      border-radius:16px;
+      overflow:hidden;
+      position:relative;
+      box-shadow: 0 10px 35px rgba(2,6,23,0.6);
+      background:
+        radial-gradient(600px 120px at 10% 20%, rgba(14,165,163,0.08), transparent 10%),
+        linear-gradient(180deg, rgba(8,20,40,0.5), rgba(2,6,23,0.35));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+    .hero-visual .stamp{
+      text-align:left;
+      max-width:420px;
+    }
+    .stamp h3{margin:0;color:#fff;font-size:20px}
+    .stamp p{margin:8px 0 0;color:var(--muted);font-size:14px}
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:18px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 6px 20px rgba(2,6,23,0.5);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    h4{margin:0 0 12px;font-size:18px;color:#fff}
+    p{margin:0;color:var(--muted);font-size:15px}
+
+    .objectifs-list{
+      display:grid;
+      gap:10px;
+    }
+    .objective{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .obj-bullet{
+      min-width:12px;height:12px;border-radius:50%;
+      background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      box-shadow:0 4px 12px rgba(14,165,163,0.12);
+      margin-top:6px;
+    }
+
+    /* Sponsors section */
+    .sponsors{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+    .sponsor-pill{
+      background:var(--glass);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:13px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* Budget */
+    .budget{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .budget .amount{
+      font-size:28px;
+      font-weight:800;
+      color:#fff;
+      font-family:"Playfair Display", serif;
+    }
+    .plan{
+      margin-top:10px;color:var(--muted);font-size:14px;
+    }
+
+    /* Footer CTA */
+    footer.cta{
+      margin-top:26px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .btn{
+      display:inline-block;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:white;
+      padding:12px 18px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow: 0 8px 30px rgba(14,165,163,0.14);
+    }
+    .btn.ghost{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* Responsive */
+    @media (max-width:980px){
+      header.hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .budget{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body contenteditable="true" dir="ltr" spellcheck="false" style="direction: ltr; min-height: 901px;">
+  <div class="container">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="brand">
+        <h1 class="title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Projet de réhabilitation</font></font></h1> 
+        <h1><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Centre Culturel "Le Zoo"</font></font></h1>
+        <p class="subtitle"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Redynamisation immédiate du Centre Culturel Congolais « LE ZOO » — restauration, rééquipement, programmation et insertion des jeunes.</font></font></p>
+        <div style="margin-top:14px;">
+          <strong style="color:#cfeef0"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Lieu :</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> Théâtre du Zoo — Kinshasa </font></font><br>
+          <strong style="color:#cfeef0"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Année de construction :</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> 1956 </font></font><br>
+          <strong style="color:#cfeef0"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Statut :</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> Projet de réhabilitation &amp; relance. 
+        </font></font></div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="stamp">
+          <h3><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Un lieu historique des arts du spectacle</font></font></h3>
+          <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Le Théâtre du Zoo a accueilli des artistes légendaires (James Brown, Miriam Makeba, Franco Luambo, Tabu Ley...) et a joué un rôle clé dans la vie culturelle congolaise.</font></font></p>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN GRID -->
+    <main class="grid">
+
+      <!-- CONTEXTE -->
+      <section class="card">
+        <h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contexte et justification</font></font></h4>
+        <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Le Théâtre du Zoo, intégré au Centre Culturel Congolais « Le Zoo », est un haut lieu historique des arts du spectacle. Construit en 1956, il sert de lieu d'échanges culturels et est devenu un centre national de promotion artistique. Toutefois, la salle est aujourd'hui en dégradation avancée et nécessite une réhabilitation complète pour préserver sa valeur patrimoniale et relancer ses activités.</font></font></p>
+      </section>
+
+      <!-- OBJECTIFS -->
+      <section class="card">
+        <h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Objectifs principaux</font></font></h4>
+        <div class="objectifs-list">
+          <div class="objective">
+            <div class="obj-bullet"><br></div>
+            <div>
+              <strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Réhabiliter la salle et les infrastructures</font></font></strong>
+              <div style="color:var(--muted);margin-top:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Acquisition et des équipements techniques (son, lumière, climatisation, scène, loges, accès).</font></font></div>
+            </div>
+          </div>
+
+          <div class="objective">
+            <div class="obj-bullet"><br></div>
+            <div>
+              <strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Assainir et valoriser durablement l'environnement</font></font></strong>
+              <div style="color:var(--muted);margin-top:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aménagement paysager, gestion écologique des eaux, éclairage solaire, tri des déchets.</font></font></div>
+            </div>
+          </div>
+
+          <div class="objective">
+            <div class="obj-bullet"><br></div>
+            <div>
+              <strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Améliorer l'accueil du public et des artistes</font></font></strong>
+              <div style="color:var(--muted);margin-top:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Nouvelles assises, signalétique, conditions techniques conformes aux normes internationales et cadre de formation.</font></font></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACTS / VISION -->
+      <section class="card">
+        <h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Vision et retombés</font></font></h4>
+        <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Un centre culturel rénové deviendra un cœur battant de la culture congolaise : un lieu de mémoire, d'apprentissage et de création artistique servant la jeunesse et le rayonnement du Congo. Le projet vise une programmation diversifiée, la formation des jeunes et une gestion durable et autonome.</font></font></p>
+        <div style="margin-top:12px" class="sponsors">
+          <span class="sponsor-pill"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Visibilité institutionnelle</font></font></span>
+          <span class="sponsor-pill"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Accès privilégié aux événements</font></font></span>
+          <span class="sponsor-pill"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Mécénat et co-branding</font></font></span>
+        </div>
+      </section>
+
+      <!-- SPONSORS -->
+      <section class="card">
+        <h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Attention envers les sponsors</font></font></h4>
+        <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Le projet sollicite le soutien des partenaires publics et privés pour financer la réhabilitation et le rééquipement du Centre. Les sponsors peuvent apporter :</font></font></p>
+        <ul style="margin:12px 0 0 18px;color:var(--muted)">
+          <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Appui financier ou matériel pour travaux et équipements</font></font></li>
+          <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Soutien aux événements culturels (naming, co-branding, mécénat)</font></font></li>
+          <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Partenariats techniques et institutionnels (ambassades, ONG, entreprises)</font></font></li>
+        </ul>
+      </section>
+
+      <!-- BUDGET -->
+      <section class="card">
+        <h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Budget estimatif &amp; Plan exécutif</font></font></h4>
+
+        <div class="budget">
+          <div>
+            <div class="amount"><br></div>
+            <div style="color:var(--muted);margin-top:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Activités culturelles</font></font></div>
+          </div>
+          <div style="text-align:right">
+            <div style="color:var(--muted)"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Total estimé</font></font></div>
+            <div class="amount" style="font-size: 30px;"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">191 000 $</font></font></div>
+          </div>
+        </div>
+
+        <div class="plan" aria-hidden="false">
+          <strong style="color:#cfeef0"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Plan exécutif (extraits)</font></font></strong>
+          <ul style="margin:8px 0 0 18px;color:var(--muted)">
+            <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Rééquipement régie sons &amp; lumières, climatisation, groupe électrogène.</font></font></li>
+            <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Réhabilitation des coulisses, loges et façade arrière.</font></font></li>
+            <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Relance des activités dès 2026 : SEFICO, festivals, expositions, théâtres, concerts.</font></font></li>
+            <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Renforcement de la cellule média et numérique.</font></font></li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- CALL TO ACTION / CONTACT -->
+      <section class="card">
+        <h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Retombées pour les sponsors</font></font></h4>
+        <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Les sponsors bénéficieront d'une visibilité institutionnelle (logos, événements, médias), d'un accès privilégié aux activités du centre et d'une image valorisée comme acteur du rayonnement culturel congolais.</font></font></p>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#" class="btn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sponsor de Devenir</font></font></a>
+          <a href="#" class="btn ghost"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Demander le dossier complet (PDF)</font></font></a>
+        </div>
+
+        <div style="margin-top: 14px; color: var(--muted); font-size: 13px;"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+          Pour contact : </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Direction du Centre Culturel Le Zoo</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — email : contact@centrelezoo.cd ; paulngoie@ccclezoo.cd
+        </font></font></div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER CTA -->
+    <footer class="cta">
+      <div style="color: var(--muted); font-size: 13px;"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+        Source du document : </font></font><em><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Projet Zoo 2.pdf</font></font></em><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Contenu adapté pour présentation web. #:contentReference[oaicite:4]{index=4}
+      </font></font></div>
+      <div style="display:flex;gap:10px">
+        <a class="btn" href="#"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Télécharger le dossier</font></font></a>
+        <a class="btn ghost" href="#"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Partager</font></font></a>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body></html>
